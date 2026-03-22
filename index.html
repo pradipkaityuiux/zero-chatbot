@@ -1204,9 +1204,9 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
-      max-width: 820px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -1218,6 +1218,8 @@
       position: relative;
       overflow: hidden;
       transition: transform .3s;
+      display: flex;
+      flex-direction: column;
     }
 
     .pricing-card:hover {
@@ -1290,6 +1292,7 @@
       flex-direction: column;
       gap: 14px;
       margin-bottom: 36px;
+      flex-grow: 1;
     }
 
     .pricing-features li {
@@ -1964,33 +1967,111 @@
       <h2 class="section-headline">Straightforward pricing.<br>No retainer traps.</h2>
     </div>
     <div class="pricing-grid">
+      <!-- Tier 1 -->
       <div class="pricing-card reveal-left">
-        <span class="pricing-tier">Starter</span>
-        <div class="pricing-name">Starter Plan</div>
-        <div class="pricing-price">₹49,999<span> one-time</span></div>
-        <div class="pricing-note">Everything you need to get started.</div>
+        <div class="pricing-name">Launch</div>
+        <div class="pricing-price">₹29,999<span> one-time</span></div>
+        <div
+          style="margin-top: 4px; margin-bottom: 24px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px 16px;">
+          <div
+            style="color: var(--accent); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">
+            + Monthly Maintenance</div>
+          <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4;">Billed at exact cost for AI API
+            usage & server hosting.</div>
+        </div>
+        <div class="pricing-note" style="color:var(--accent); font-weight:600; margin-bottom:12px;">2-Page Website +
+          Basic Chatbot</div>
+        <div class="pricing-note" style="line-height:1.5;">Best for: Small businesses, local services, personal brands,
+          and founders who need a fast online presence.</div>
         <div class="pricing-divider"></div>
         <ul class="pricing-features">
-          <li>2-page AI-optimized website</li>
-          <li>Basic chatbot integration</li>
-          <li>1 month support</li>
-          <li>Goes live in 14 days</li>
+          <li>2-page custom website</li>
+          <li>Home page + 1 core page</li>
+          <li>Mobile responsive design</li>
+          <li>Clean modern UI</li>
+          <li>Fast loading performance</li>
+          <li>Basic on-page SEO setup</li>
+          <li>Contact form integration</li>
+          <li>Basic chatbot setup</li>
+          <li>FAQ-style chatbot replies</li>
+          <li>Business info and service answers</li>
+          <li>Simple CTA prompts inside chatbot</li>
+          <li>1 revision round</li>
+          <li>Delivery time: 7 to 10 days</li>
         </ul>
         <a href="#" class="btn-ghost open-modal-btn" style="width:100%;justify-content:center;">Get Started</a>
       </div>
-      <div class="pricing-card featured reveal-right">
-        <span class="pricing-tier">Growth</span>
-        <div class="pricing-name">Growth Plan</div>
-        <div class="pricing-price">₹89,999<span> one-time</span></div>
-        <div class="pricing-note">Maximum results, minimum time.</div>
+
+      <!-- Tier 2 -->
+      <div class="pricing-card featured reveal">
+        <div class="pricing-name">Growth</div>
+        <div class="pricing-price">₹59,999<span> one-time</span></div>
+        <div
+          style="margin-top: 4px; margin-bottom: 24px; background: rgba(0,255,209,0.05); border: 1px solid rgba(0,255,209,0.15); border-radius: 12px; padding: 14px 16px;">
+          <div
+            style="color: var(--accent); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">
+            + Monthly Maintenance</div>
+          <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4;">Billed at exact cost for AI API
+            usage & server hosting.</div>
+        </div>
+        <div class="pricing-note" style="color:var(--accent); font-weight:600; margin-bottom:12px;">5-Page Website +
+          Advanced Chatbot with Lead Capture</div>
+        <div class="pricing-note" style="line-height:1.5;">Best for: Businesses who want a stronger website, better
+          trust, and more lead generation from visitors.</div>
         <div class="pricing-divider"></div>
         <ul class="pricing-features">
-          <li>5-page website + blog setup</li>
-          <li>Advanced chatbot (lead capture + objection handling)</li>
-          <li>3 months of optimization</li>
-          <li>Priority support</li>
+          <li>Up to 5 custom website pages</li>
+          <li>Home, About, Services, Contact, and 1 extra page</li>
+          <li>Premium modern UI design</li>
+          <li>Mobile responsive design</li>
+          <li>Speed optimization</li>
+          <li>Basic on-page SEO across pages</li>
+          <li>Contact form integration</li>
+          <li>Advanced chatbot setup</li>
+          <li>Lead capture inside chatbot</li>
+          <li>Collect name, phone, email, and inquiry</li>
+          <li>FAQ and service flow automation</li>
+          <li>Lead delivery to email</li>
+          <li>Custom dashboard to track leads</li>
+          <li>Stronger CTA flow in chatbot</li>
+          <li>Basic analytics setup</li>
+          <li>2 revision rounds</li>
+          <li>Delivery time: 10 to 14 days</li>
         </ul>
-        <a href="#" class="btn-primary open-modal-btn" style="width:100%;justify-content:center;">Lock In Your Spot</a>
+        <a href="#" class="btn-primary open-modal-btn" style="width:100%;justify-content:center;">Book Your Audit</a>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="pricing-card reveal-right">
+        <div class="pricing-name">Chatbot Boost</div>
+        <div class="pricing-price">₹19,999<span> one-time</span></div>
+        <div
+          style="margin-top: 4px; margin-bottom: 24px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px 16px;">
+          <div
+            style="color: var(--accent); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">
+            + Monthly Maintenance</div>
+          <div style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4;">Billed at exact cost for AI API
+            usage & server hosting.</div>
+        </div>
+        <div class="pricing-note" style="color:var(--accent); font-weight:600; margin-bottom:12px;">Chatbot for Existing
+          Website</div>
+        <div class="pricing-note" style="line-height:1.5;">Best for: Businesses who already have a website and want to
+          convert more visitors into leads.</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li>Chatbot integration on existing website</li>
+          <li>Custom chatbot flow setup</li>
+          <li>FAQ automation</li>
+          <li>Service and pricing query handling</li>
+          <li>Lead capture form inside chatbot</li>
+          <li>Collect name, phone, email, and inquiry</li>
+          <li>Email or WhatsApp lead handoff</li>
+          <li>Branding matched to existing website</li>
+          <li>CTA prompts and conversation flow</li>
+          <li>1 revision round</li>
+          <li>Delivery time: 3 to 5 days</li>
+        </ul>
+        <a href="#" class="btn-ghost open-modal-btn" style="width:100%;justify-content:center;">Add Chatbot</a>
       </div>
     </div>
     <p class="pricing-urgency reveal" style="margin-top:40px;">
@@ -2283,7 +2364,7 @@
     });
   </script>
   <script src="https://chatbot-backend-production-68d3.up.railway.app/widget/chatbot.js"
-    data-business-id="demo-plumbing"></script>
+    data-business-id="zero-chatbot"></script>
 </body>
 
 </html>
